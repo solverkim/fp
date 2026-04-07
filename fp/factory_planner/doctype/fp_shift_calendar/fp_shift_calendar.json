@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "autoname": "format:SHIFT-{workstation}-{date}-{shift_type}",
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "workstation", "date", "shift_type",
+  "section_time", "start_time", "end_time",
+  "column_break_time", "break_duration_mins", "is_holiday",
+  "section_calc", "available_capacity_mins"
+ ],
+ "fields": [
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Day",
+   "fieldname": "shift_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Shift Type",
+   "options": "Day\nNight\nOvertime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_time",
+   "fieldtype": "Section Break",
+   "label": "Working Hours"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_time",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "break_duration_mins",
+   "fieldtype": "Float",
+   "label": "Break Duration (mins)"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_holiday",
+   "fieldtype": "Check",
+   "label": "Is Holiday"
+  },
+  {
+   "fieldname": "section_calc",
+   "fieldtype": "Section Break",
+   "label": "Calculated"
+  },
+  {
+   "default": "0",
+   "fieldname": "available_capacity_mins",
+   "fieldtype": "Float",
+   "label": "Available Capacity (mins)",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Shift Calendar",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Manufacturing Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

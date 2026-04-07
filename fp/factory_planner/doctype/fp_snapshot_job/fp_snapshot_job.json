@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_id", "item_code", "qty", "lot_number",
+  "workstation", "operation", "operation_sequence",
+  "planned_start", "planned_end",
+  "setup_time_mins", "due_date", "tardiness_mins",
+  "source_demand_id", "is_frozen", "work_order"
+ ],
+ "fields": [
+  {"fieldname": "job_id", "fieldtype": "Data", "in_list_view": 1, "label": "Job ID", "reqd": 1},
+  {"fieldname": "item_code", "fieldtype": "Link", "in_list_view": 1, "label": "Item Code", "options": "Item", "reqd": 1},
+  {"fieldname": "qty", "fieldtype": "Float", "in_list_view": 1, "label": "Qty", "reqd": 1},
+  {"fieldname": "lot_number", "fieldtype": "Int", "label": "Lot Number"},
+  {"fieldname": "workstation", "fieldtype": "Link", "in_list_view": 1, "label": "Workstation", "options": "Workstation", "reqd": 1},
+  {"fieldname": "operation", "fieldtype": "Link", "label": "Operation", "options": "Operation", "reqd": 1},
+  {"fieldname": "operation_sequence", "fieldtype": "Int", "label": "Operation Seq", "reqd": 1},
+  {"fieldname": "planned_start", "fieldtype": "Datetime", "in_list_view": 1, "label": "Planned Start", "reqd": 1},
+  {"fieldname": "planned_end", "fieldtype": "Datetime", "label": "Planned End", "reqd": 1},
+  {"fieldname": "setup_time_mins", "fieldtype": "Float", "label": "Setup Time (mins)", "default": "0"},
+  {"fieldname": "due_date", "fieldtype": "Date", "label": "Due Date", "reqd": 1},
+  {"fieldname": "tardiness_mins", "fieldtype": "Float", "label": "Tardiness (mins)", "default": "0"},
+  {"fieldname": "source_demand_id", "fieldtype": "Data", "label": "Source Demand ID"},
+  {"fieldname": "is_frozen", "fieldtype": "Check", "label": "Frozen", "default": "0"},
+  {"fieldname": "work_order", "fieldtype": "Link", "label": "Work Order", "options": "Work Order"}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Snapshot Job",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

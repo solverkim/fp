@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "autoname": "format:TAT-{item_code}-{operation}",
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code", "operation", "workstation",
+  "section_timing", "base_tat_mins", "wait_time_mins",
+  "section_inspection", "is_inline_inspection", "inspection_tat_mins"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Operation",
+   "options": "Operation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "section_timing",
+   "fieldtype": "Section Break",
+   "label": "Timing"
+  },
+  {
+   "default": "0",
+   "fieldname": "base_tat_mins",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Base TAT (mins)",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "wait_time_mins",
+   "fieldtype": "Float",
+   "label": "Wait Time (mins)"
+  },
+  {
+   "fieldname": "section_inspection",
+   "fieldtype": "Section Break",
+   "label": "Inline Inspection"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_inline_inspection",
+   "fieldtype": "Check",
+   "label": "Is Inline Inspection (No W/O)"
+  },
+  {
+   "default": "0",
+   "depends_on": "is_inline_inspection",
+   "fieldname": "inspection_tat_mins",
+   "fieldtype": "Float",
+   "label": "Inspection TAT (mins)"
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP TAT Master",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Manufacturing Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

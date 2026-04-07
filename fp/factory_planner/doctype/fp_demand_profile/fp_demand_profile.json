@@ -1,0 +1,26 @@
+{
+ "actions": [],
+ "autoname": "format:DP-{####}",
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["planning_week", "items"],
+ "fields": [
+  {"fieldname": "planning_week", "fieldtype": "Data", "in_list_view": 1, "label": "Planning Week", "reqd": 1},
+  {"fieldname": "items", "fieldtype": "Table", "label": "Demand Items", "options": "FP Demand Profile Item", "reqd": 1}
+ ],
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Demand Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1},
+  {"create": 1, "read": 1, "role": "Manufacturing Manager", "write": 1}
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

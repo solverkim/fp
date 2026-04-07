@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "autoname": "format:PP-{####}",
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "snapshot_name", "status", "column_break_header",
+  "planning_horizon_start", "planning_horizon_end", "parent_snapshot",
+  "section_kpi", "solver_run_time_secs", "objective_value",
+  "column_break_kpi", "total_tardiness_mins", "total_setup_time_mins", "line_utilization_pct",
+  "section_approval", "created_by_user", "confirmed_by_user", "confirmed_at",
+  "section_jobs", "jobs",
+  "section_master", "master_snapshot"
+ ],
+ "fields": [
+  {"fieldname": "snapshot_name", "fieldtype": "Data", "in_list_view": 1, "label": "Snapshot Name", "reqd": 1},
+  {"default": "Pre Plan", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "in_standard_filter": 1, "label": "Status", "options": "Pre Plan\nDraft Plan\nFixed Plan\nArchived", "reqd": 1},
+  {"fieldname": "column_break_header", "fieldtype": "Column Break"},
+  {"fieldname": "planning_horizon_start", "fieldtype": "Date", "in_list_view": 1, "label": "Horizon Start", "reqd": 1},
+  {"fieldname": "planning_horizon_end", "fieldtype": "Date", "label": "Horizon End", "reqd": 1},
+  {"fieldname": "parent_snapshot", "fieldtype": "Link", "label": "Parent Snapshot", "options": "FP Planning Snapshot"},
+  {"fieldname": "section_kpi", "fieldtype": "Section Break", "label": "KPI"},
+  {"fieldname": "solver_run_time_secs", "fieldtype": "Float", "label": "Solver Runtime (s)"},
+  {"fieldname": "objective_value", "fieldtype": "Float", "label": "Objective Value (Z)"},
+  {"fieldname": "column_break_kpi", "fieldtype": "Column Break"},
+  {"fieldname": "total_tardiness_mins", "fieldtype": "Float", "label": "Total Tardiness (mins)"},
+  {"fieldname": "total_setup_time_mins", "fieldtype": "Float", "label": "Total Setup Time (mins)"},
+  {"fieldname": "line_utilization_pct", "fieldtype": "Float", "label": "Line Utilization (%)"},
+  {"fieldname": "section_approval", "fieldtype": "Section Break", "label": "Approval"},
+  {"fieldname": "created_by_user", "fieldtype": "Link", "label": "Created By", "options": "User"},
+  {"fieldname": "confirmed_by_user", "fieldtype": "Link", "label": "Confirmed By", "options": "User"},
+  {"fieldname": "confirmed_at", "fieldtype": "Datetime", "label": "Confirmed At"},
+  {"fieldname": "section_jobs", "fieldtype": "Section Break", "label": "Scheduled Jobs"},
+  {"fieldname": "jobs", "fieldtype": "Table", "label": "Jobs", "options": "FP Snapshot Job", "reqd": 1},
+  {"fieldname": "section_master", "fieldtype": "Section Break", "label": "Master Data Snapshot", "collapsible": 1},
+  {"fieldname": "master_snapshot", "fieldtype": "Long Text", "label": "Master Snapshot (JSON)"}
+ ],
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Planning Snapshot",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1},
+  {"create": 1, "read": 1, "role": "Manufacturing Manager", "write": 1}
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

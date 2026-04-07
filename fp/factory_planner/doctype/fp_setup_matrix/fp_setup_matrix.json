@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "autoname": "format:SM-{workstation}-{from_setup_group}-{to_setup_group}",
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "workstation", "column_break_1",
+  "from_setup_group", "to_setup_group",
+  "section_setup", "setup_time_mins", "is_transition_allowed",
+  "column_break_2", "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_setup_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Setup Group",
+   "options": "FP Setup Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_setup_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Setup Group",
+   "options": "FP Setup Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_setup",
+   "fieldtype": "Section Break",
+   "label": "Setup Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "setup_time_mins",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Setup Time (mins)",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_transition_allowed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Transition Allowed"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Setup Matrix",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Manufacturing Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

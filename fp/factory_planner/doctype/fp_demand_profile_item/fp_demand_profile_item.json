@@ -1,0 +1,29 @@
+{
+ "actions": [],
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["item_code", "gross_demand", "available_inventory", "firm_wo_qty", "net_demand", "lot_size", "num_jobs", "due_date"],
+ "fields": [
+  {"fieldname": "item_code", "fieldtype": "Link", "in_list_view": 1, "label": "Item Code", "options": "Item", "reqd": 1},
+  {"fieldname": "gross_demand", "fieldtype": "Float", "in_list_view": 1, "label": "Gross Demand", "reqd": 1},
+  {"fieldname": "available_inventory", "fieldtype": "Float", "label": "Available Inventory", "default": "0"},
+  {"fieldname": "firm_wo_qty", "fieldtype": "Float", "label": "Firm W/O Qty", "default": "0"},
+  {"fieldname": "net_demand", "fieldtype": "Float", "in_list_view": 1, "label": "Net Demand", "read_only": 1},
+  {"fieldname": "lot_size", "fieldtype": "Float", "label": "Lot Size", "default": "200"},
+  {"fieldname": "num_jobs", "fieldtype": "Int", "label": "Number of Jobs", "read_only": 1},
+  {"fieldname": "due_date", "fieldtype": "Date", "in_list_view": 1, "label": "Due Date", "reqd": 1}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Demand Profile Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}
