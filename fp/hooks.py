@@ -7,6 +7,14 @@ app_license = "mit"
 
 required_apps = ["frappe", "erpnext"]
 
+# Fixtures — custom fields on ERPNext doctypes
+fixtures = [
+	{
+		"dt": "Custom Field",
+		"filters": [["module", "=", "Factory Planner"]],
+	},
+]
+
 # Scheduled Tasks
 scheduler_events = {
 	"daily": [

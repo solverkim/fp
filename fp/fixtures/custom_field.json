@@ -1,0 +1,15 @@
+[
+ {
+  "doctype": "Custom Field",
+  "dt": "Work Order",
+  "fieldname": "custom_fp_snapshot_job",
+  "fieldtype": "Data",
+  "label": "FP Snapshot Job",
+  "insert_after": "expected_delivery_date",
+  "read_only": 1,
+  "no_copy": 1,
+  "print_hide": 1,
+  "description": "Reverse link to the FP Snapshot Job that generated this Work Order",
+  "module": "Factory Planner"
+ }
+]
