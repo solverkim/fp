@@ -154,9 +154,9 @@
  "name": "Factory Planner",
  "number_cards": [],
  "owner": "Administrator",
- "parent_page": "Manufacturing",
+ "parent_page": "",
  "public": 1,
- "restrict_to_domain": "Manufacturing",
+ "restrict_to_domain": "",
  "roles": [],
  "sequence_id": 10.0,
  "shortcuts": [
