@@ -1,5 +1,6 @@
 [
  {
+  "name": "Work Order-custom_fp_snapshot_job",
   "doctype": "Custom Field",
   "dt": "Work Order",
   "fieldname": "custom_fp_snapshot_job",
