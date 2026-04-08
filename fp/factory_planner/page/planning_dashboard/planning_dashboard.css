@@ -1,0 +1,186 @@
+/* FP Planning Dashboard — Snapshot Comparison Styles */
+
+.fp-dashboard-container {
+	padding: 15px;
+}
+
+/* Header — side-by-side snapshot info */
+.fp-dashboard-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	padding: 16px 20px;
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.fp-dashboard-header-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: var(--text-base);
+}
+
+.fp-dashboard-header-vs {
+	font-size: var(--text-lg);
+	font-weight: 700;
+	color: var(--text-muted);
+	text-transform: uppercase;
+}
+
+.fp-dashboard-badge {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 4px;
+	font-size: var(--text-xs);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.fp-badge--baseline {
+	background: var(--blue-100, #ebf8ff);
+	color: var(--blue-700, #2b6cb0);
+}
+
+.fp-badge--comparison {
+	background: var(--green-100, #f0fff4);
+	color: var(--green-700, #276749);
+}
+
+/* KPI Grid */
+.fp-kpi-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 14px;
+	margin-bottom: 24px;
+}
+
+.fp-kpi-card {
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	overflow: hidden;
+	transition: box-shadow 0.15s ease;
+}
+
+.fp-kpi-card:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.fp-kpi-card-header {
+	padding: 10px 14px 0;
+}
+
+.fp-kpi-label {
+	font-size: var(--text-sm);
+	font-weight: 600;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.fp-kpi-card-body {
+	padding: 8px 14px 14px;
+}
+
+.fp-kpi-values {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.fp-kpi-value {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fp-kpi-value-label {
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--text-muted);
+}
+
+.fp-kpi-value--a .fp-kpi-value-label {
+	color: var(--blue-500, #4299e1);
+}
+
+.fp-kpi-value--b .fp-kpi-value-label {
+	color: var(--green-500, #48bb78);
+}
+
+.fp-kpi-value-num {
+	font-size: var(--text-2xl, 1.5rem);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--text-color);
+}
+
+.fp-kpi-value-unit {
+	font-size: var(--text-xs);
+	color: var(--text-muted);
+}
+
+.fp-kpi-delta {
+	text-align: center;
+	font-size: var(--text-sm);
+	font-weight: 600;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+/* Sections */
+.fp-dashboard-section {
+	margin-bottom: 24px;
+}
+
+.fp-dashboard-section-title {
+	font-size: var(--text-base);
+	font-weight: 600;
+	color: var(--heading-color);
+	margin-bottom: 12px;
+	padding-bottom: 6px;
+	border-bottom: 2px solid var(--primary);
+	display: inline-block;
+}
+
+/* KPI comparison table */
+.fp-kpi-table th {
+	background: var(--subtle-fg);
+	font-size: var(--text-sm);
+}
+
+.fp-kpi-table td {
+	font-size: var(--text-sm);
+	vertical-align: middle;
+}
+
+/* Job summary */
+.fp-job-summary-row {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.fp-job-summary-item {
+	display: flex;
+	flex-direction: column;
+	padding: 12px 20px;
+	background: var(--card-bg);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	min-width: 140px;
+}
+
+.fp-job-summary-item span {
+	font-size: var(--text-xs);
+}
+
+.fp-job-summary-item strong {
+	font-size: var(--text-xl, 1.25rem);
+	margin-top: 4px;
+}

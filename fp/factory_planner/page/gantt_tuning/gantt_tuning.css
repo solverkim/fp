@@ -1,0 +1,250 @@
+/* FP Gantt Tuning — Manufacturing Gantt Chart Styles */
+
+.fp-gantt-container {
+	padding: 0;
+}
+
+/* Toolbar */
+.fp-gantt-toolbar {
+	display: flex;
+	align-items: center;
+	padding: 8px 15px;
+	border-bottom: 1px solid var(--border-color);
+	background: var(--card-bg);
+}
+
+.fp-gantt-toolbar .btn-group .btn.active {
+	background: var(--primary);
+	color: #fff;
+	border-color: var(--primary);
+}
+
+.fp-gantt-info {
+	font-size: var(--text-sm);
+}
+
+/* Chart table */
+.fp-gantt-table {
+	overflow-x: auto;
+	overflow-y: auto;
+	max-height: calc(100vh - 260px);
+}
+
+.fp-gantt-row {
+	display: flex;
+	align-items: stretch;
+	border-bottom: 1px solid var(--border-color);
+	min-height: 40px;
+}
+
+.fp-gantt-row:hover {
+	background: var(--subtle-accent);
+}
+
+.fp-gantt-row-label {
+	flex: 0 0 160px;
+	padding: 8px 12px;
+	font-size: var(--text-sm);
+	font-weight: 600;
+	color: var(--text-color);
+	background: var(--card-bg);
+	border-right: 1px solid var(--border-color);
+	display: flex;
+	align-items: center;
+	position: sticky;
+	left: 0;
+	z-index: 2;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fp-gantt-row-bars {
+	flex: 1;
+	position: relative;
+	min-height: 36px;
+	padding: 2px 0;
+}
+
+/* Frozen zone overlay */
+.fp-gantt-frozen-zone {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 4px,
+		rgba(128, 128, 128, 0.08) 4px,
+		rgba(128, 128, 128, 0.08) 8px
+	);
+	border-right: 2px dashed var(--gray-400);
+	pointer-events: none;
+	z-index: 0;
+}
+
+/* Job bars */
+.fp-gantt-bar {
+	position: absolute;
+	top: 4px;
+	height: 28px;
+	background: var(--primary);
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0 6px;
+	z-index: 1;
+	transition: box-shadow 0.15s ease, transform 0.1s ease;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.fp-gantt-bar:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	transform: translateY(-1px);
+	z-index: 3;
+}
+
+.fp-gantt-bar--tardy {
+	background: var(--red-500, #e53e3e);
+	animation: fp-tardy-pulse 2s ease-in-out infinite;
+}
+
+@keyframes fp-tardy-pulse {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.75; }
+}
+
+.fp-gantt-bar--frozen {
+	background: var(--gray-400, #a0aec0);
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+
+.fp-gantt-bar--frozen[draggable] {
+	cursor: not-allowed;
+}
+
+.fp-gantt-bar--dragging {
+	opacity: 0.5;
+	transform: scale(1.02);
+	z-index: 10;
+}
+
+.fp-gantt-bar-label {
+	font-size: 11px;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	user-select: none;
+}
+
+/* Drop target highlight */
+.fp-gantt-row--drop-target {
+	background: var(--blue-50, #ebf8ff);
+	outline: 2px dashed var(--primary);
+	outline-offset: -2px;
+}
+
+/* Legend */
+.fp-gantt-legend {
+	padding: 10px 15px;
+	border-top: 1px solid var(--border-color);
+	background: var(--card-bg);
+}
+
+.fp-gantt-legend-items {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.fp-gantt-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: var(--text-sm);
+	color: var(--text-muted);
+}
+
+.fp-gantt-legend-color {
+	display: inline-block;
+	width: 20px;
+	height: 12px;
+	border-radius: 3px;
+}
+
+.fp-gantt-legend-color.fp-gantt-bar {
+	position: static;
+	height: 12px;
+	padding: 0;
+	cursor: default;
+	box-shadow: none;
+}
+
+.fp-gantt-legend-color.fp-gantt-bar--tardy {
+	position: static;
+	height: 12px;
+	padding: 0;
+	cursor: default;
+	box-shadow: none;
+	animation: none;
+}
+
+.fp-gantt-legend-color.fp-gantt-bar--frozen {
+	position: static;
+	height: 12px;
+	padding: 0;
+	cursor: default;
+	box-shadow: none;
+	opacity: 1;
+}
+
+.fp-gantt-legend-color.fp-gantt-frozen-zone {
+	position: static;
+	height: 12px;
+	border-right: none;
+}
+
+/* Job detail dialog */
+.fp-job-detail {
+	padding: 0;
+}
+
+.fp-job-detail .table th {
+	width: 140px;
+	background: var(--subtle-fg);
+	font-size: var(--text-sm);
+}
+
+.fp-job-detail .table td {
+	font-size: var(--text-sm);
+}
+
+/* Time axis */
+.fp-gantt-time-axis {
+	border-bottom: 2px solid var(--border-color);
+	background: var(--subtle-fg);
+	min-height: 28px;
+}
+
+.fp-gantt-axis-bar {
+	overflow: visible;
+}
+
+.fp-gantt-tick {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	border-left: 1px solid var(--gray-300);
+	padding-left: 4px;
+}
+
+.fp-gantt-tick-label {
+	font-size: 10px;
+	color: var(--text-muted);
+	white-space: nowrap;
+	user-select: none;
+}

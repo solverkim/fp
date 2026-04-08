@@ -1,0 +1,21 @@
+{
+ "content": null,
+ "creation": "2026-04-07 12:00:00",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "gantt",
+ "idx": 0,
+ "modified": "2026-04-07 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "gantt-tuning",
+ "owner": "Administrator",
+ "page_name": "gantt-tuning",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Manufacturing Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Gantt Tuning"
+}

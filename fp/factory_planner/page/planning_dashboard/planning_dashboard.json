@@ -1,0 +1,21 @@
+{
+ "content": null,
+ "creation": "2026-04-08 12:00:00",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "dashboard",
+ "idx": 0,
+ "modified": "2026-04-08 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "planning-dashboard",
+ "owner": "Administrator",
+ "page_name": "planning-dashboard",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Manufacturing Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Planning Dashboard"
+}

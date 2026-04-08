@@ -1,0 +1,21 @@
+{
+ "content": null,
+ "creation": "2026-04-08 12:00:00",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "list",
+ "idx": 0,
+ "modified": "2026-04-08 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "wo-tracking",
+ "owner": "Administrator",
+ "page_name": "wo-tracking",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Manufacturing Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "Work Order Tracking"
+}

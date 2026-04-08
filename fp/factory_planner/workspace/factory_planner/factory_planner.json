@@ -1,0 +1,192 @@
+{
+ "app": "fp",
+ "charts": [],
+ "content": "[{\"id\":\"fp_header_shortcuts\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Planning Tools</b></span>\",\"col\":12}},{\"id\":\"fp_shortcut_dashboard\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Planning Dashboard\",\"col\":4}},{\"id\":\"fp_shortcut_gantt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Gantt Tuning\",\"col\":4}},{\"id\":\"fp_shortcut_tracking\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work Order Tracking\",\"col\":4}},{\"id\":\"fp_spacer_1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"fp_header_masters\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\":12}},{\"id\":\"fp_card_planning\",\"type\":\"card\",\"data\":{\"card_name\":\"Planning\",\"col\":4}},{\"id\":\"fp_card_master\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data\",\"col\":4}},{\"id\":\"fp_card_settings\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "creation": "2026-04-08 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "factory",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Factory Planner",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Demand Profile",
+   "link_count": 0,
+   "link_to": "FP Demand Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Snapshot",
+   "link_count": 0,
+   "link_to": "FP Planning Snapshot",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Planning Dashboard",
+   "link_count": 0,
+   "link_to": "planning-dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gantt Tuning",
+   "link_count": 0,
+   "link_to": "gantt-tuning",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Order Tracking",
+   "link_count": 0,
+   "link_to": "wo-tracking",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Data",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shift Calendar",
+   "link_count": 0,
+   "link_to": "FP Shift Calendar",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TAT Master",
+   "link_count": 0,
+   "link_to": "FP TAT Master",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup Group",
+   "link_count": 0,
+   "link_to": "FP Setup Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup Matrix",
+   "link_count": 0,
+   "link_to": "FP Setup Matrix",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Solver Config",
+   "link_count": 0,
+   "link_to": "FP Solver Config",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "Factory Planner",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Manufacturing",
+ "public": 1,
+ "restrict_to_domain": "Manufacturing",
+ "roles": [],
+ "sequence_id": 10.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Planning Dashboard",
+   "link_to": "planning-dashboard",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Gantt Tuning",
+   "link_to": "gantt-tuning",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "Page"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Work Order Tracking",
+   "link_to": "wo-tracking",
+   "restrict_to_domain": "",
+   "stats_filter": "",
+   "type": "Page"
+  }
+ ],
+ "title": "Factory Planner"
+}
