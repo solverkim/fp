@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-04-07 12:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_objective",
+  "alpha", "beta",
+  "column_break_objective",
+  "max_time_secs", "num_workers",
+  "section_ensemble",
+  "enable_scip_ensemble", "scip_max_time_secs",
+  "column_break_ensemble",
+  "quality_threshold"
+ ],
+ "fields": [
+  {"fieldname": "section_objective", "fieldtype": "Section Break", "label": "Objective Weights"},
+  {"default": "1000", "fieldname": "alpha", "fieldtype": "Int", "in_list_view": 1, "label": "Alpha (Tardiness Weight)", "reqd": 1},
+  {"default": "1", "fieldname": "beta", "fieldtype": "Int", "in_list_view": 1, "label": "Beta (Setup Time Weight)", "reqd": 1},
+  {"fieldname": "column_break_objective", "fieldtype": "Column Break"},
+  {"default": "120", "fieldname": "max_time_secs", "fieldtype": "Int", "label": "Max Solver Time (s)", "reqd": 1},
+  {"default": "4", "fieldname": "num_workers", "fieldtype": "Int", "label": "Num Workers", "reqd": 1},
+  {"fieldname": "section_ensemble", "fieldtype": "Section Break", "label": "SCIP Ensemble"},
+  {"default": "0", "fieldname": "enable_scip_ensemble", "fieldtype": "Check", "label": "Enable SCIP Ensemble"},
+  {"default": "60", "depends_on": "enable_scip_ensemble", "fieldname": "scip_max_time_secs", "fieldtype": "Int", "label": "SCIP Max Time (s)"},
+  {"fieldname": "column_break_ensemble", "fieldtype": "Column Break"},
+  {"default": "0.95", "depends_on": "enable_scip_ensemble", "fieldname": "quality_threshold", "fieldtype": "Float", "label": "Quality Threshold (0-1)"}
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-08 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Factory Planner",
+ "name": "FP Solver Config",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1},
+  {"read": 1, "role": "Manufacturing Manager", "write": 1}
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
